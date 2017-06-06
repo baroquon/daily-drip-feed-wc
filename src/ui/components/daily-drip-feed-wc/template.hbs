@@ -1,3 +1,13 @@
-<div>
-  <h1>Welcome to Glimmer!</h1>
-</div>
+<h3>
+  {{results.feed.title}}
+</h3>
+<h4>
+  {{results.feed.description}}
+</h4>
+<ul data-feed-list>
+  {{#each results.items key="@index" as |item|}}
+    <li>
+      <a href={{item.link}}>{{item.title}}</a>
+    </li>
+  {{/each}}
+</ul>
